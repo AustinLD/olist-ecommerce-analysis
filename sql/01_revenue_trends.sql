@@ -87,5 +87,4 @@ SELECT
     mom_revenue_pct_change,
     cumulative_revenue
 FROM revenue_with_changes
-ORDER BY order_month
-LIMIT 500;
+ORDER BY order_month;
