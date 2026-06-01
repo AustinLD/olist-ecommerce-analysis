@@ -123,7 +123,7 @@ CREATE TABLE order_reviews (
 -- Use forward slashes even on Windows.
 -- ============================================================
 
-LOAD DATA LOCAL INFILE 'YOUR_PATH/olist_customers_dataset.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/austi/OneDrive/Documents/Cowork OS/Portfolio Projects/Project 1 - E-Commerce Analysis/data//olist_customers_dataset.csv'
 INTO TABLE customers
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -131,7 +131,7 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
 (customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state);
 
-LOAD DATA LOCAL INFILE 'YOUR_PATH/olist_geolocation_dataset.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/austi/OneDrive/Documents/Cowork OS/Portfolio Projects/Project 1 - E-Commerce Analysis/data//olist_geolocation_dataset.csv'
 INTO TABLE geolocation
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -139,7 +139,7 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
 (geolocation_zip_code_prefix, geolocation_lat, geolocation_lng, geolocation_city, geolocation_state);
 
-LOAD DATA LOCAL INFILE 'YOUR_PATH/olist_sellers_dataset.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/austi/OneDrive/Documents/Cowork OS/Portfolio Projects/Project 1 - E-Commerce Analysis/data//olist_sellers_dataset.csv'
 INTO TABLE sellers
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -147,7 +147,7 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
 (seller_id, seller_zip_code_prefix, seller_city, seller_state);
 
-LOAD DATA LOCAL INFILE 'YOUR_PATH/product_category_name_translation.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/austi/OneDrive/Documents/Cowork OS/Portfolio Projects/Project 1 - E-Commerce Analysis/data//product_category_name_translation.csv'
 INTO TABLE product_category_translation
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -155,7 +155,7 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
 (product_category_name, product_category_name_english);
 
-LOAD DATA LOCAL INFILE 'YOUR_PATH/olist_products_dataset.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/austi/OneDrive/Documents/Cowork OS/Portfolio Projects/Project 1 - E-Commerce Analysis/data//olist_products_dataset.csv'
 INTO TABLE products
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -164,7 +164,7 @@ IGNORE 1 ROWS
 (product_id, product_category_name, product_name_lenght, product_description_lenght,
  product_photos_qty, product_weight_g, product_length_cm, product_height_cm, product_width_cm);
 
-LOAD DATA LOCAL INFILE 'YOUR_PATH/olist_orders_dataset.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/austi/OneDrive/Documents/Cowork OS/Portfolio Projects/Project 1 - E-Commerce Analysis/data//olist_orders_dataset.csv'
 INTO TABLE orders
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -173,7 +173,7 @@ IGNORE 1 ROWS
 (order_id, customer_id, order_status, order_purchase_timestamp, order_approved_at,
  order_delivered_carrier_date, order_delivered_customer_date, order_estimated_delivery_date);
 
-LOAD DATA LOCAL INFILE 'YOUR_PATH/olist_order_items_dataset.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/austi/OneDrive/Documents/Cowork OS/Portfolio Projects/Project 1 - E-Commerce Analysis/data//olist_order_items_dataset.csv'
 INTO TABLE order_items
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -181,7 +181,7 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
 (order_id, order_item_id, product_id, seller_id, shipping_limit_date, price, freight_value);
 
-LOAD DATA LOCAL INFILE 'YOUR_PATH/olist_order_payments_dataset.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/austi/OneDrive/Documents/Cowork OS/Portfolio Projects/Project 1 - E-Commerce Analysis/data//olist_order_payments_dataset.csv'
 INTO TABLE order_payments
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -189,7 +189,7 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
 (order_id, payment_sequential, payment_type, payment_installments, payment_value);
 
-LOAD DATA LOCAL INFILE 'YOUR_PATH/olist_order_reviews_dataset.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/austi/OneDrive/Documents/Cowork OS/Portfolio Projects/Project 1 - E-Commerce Analysis/data//olist_order_reviews_dataset.csv'
 INTO TABLE order_reviews
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
