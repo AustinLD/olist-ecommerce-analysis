@@ -1,4 +1,3 @@
--- Active: 1770762285122@@127.0.0.1@3306@olist
 -- ============================================================
 -- Analysis 1: Monthly Revenue & Order Volume Trends
 --
@@ -13,7 +12,6 @@
 -- date functions, aggregation, filtering on order status
 -- ============================================================
 
-USE olist;
 
 -- ============================================================
 -- CTE 1: monthly_revenue
