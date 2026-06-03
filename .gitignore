@@ -22,3 +22,7 @@ Thumbs.db
 # Claud Memory
 MEMORY.md
 
+# Ignore Power BI binary files
+*.pbix
+
+
