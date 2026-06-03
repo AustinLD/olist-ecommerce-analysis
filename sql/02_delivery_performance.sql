@@ -75,10 +75,10 @@ WITH delivery_base AS (
             -- ORDER BY review_creation_date DESC puts the most recent
             -- review first (row 1). review_id DESC breaks ties.
             SELECT order_id, review_score,
-                   ROW_NUMBER() OVER (
-                       PARTITION BY order_id
-                       ORDER BY review_creation_date DESC, review_id DESC
-                   ) AS rn
+                ROW_NUMBER() OVER (
+                    PARTITION BY order_id
+                    ORDER BY review_creation_date DESC, review_id DESC
+                ) AS rn
             FROM order_reviews
         ) ranked
         -- Only keep row number 1 = the most recent review per order.
@@ -90,8 +90,8 @@ WITH delivery_base AS (
     -- Filter to delivered orders only with valid date fields.
     -- Cancelled, shipped, or processing orders are excluded.
     WHERE o.order_status = 'delivered'
-      AND o.order_delivered_customer_date IS NOT NULL
-      AND o.order_estimated_delivery_date IS NOT NULL
+        AND o.order_delivered_customer_date IS NOT NULL
+        AND o.order_estimated_delivery_date IS NOT NULL
 ),
 
 -- ============================================================
@@ -120,7 +120,7 @@ overall_summary AS (
         -- On-time rate as a percentage, rounded to 2 decimal places
         ROUND(
             SUM(CASE WHEN delivery_status = 'On Time' THEN 1 ELSE 0 END)
-            / COUNT(*) * 100, 2
+            / COUNT(*) * 100.0, 2
         ) AS on_time_rate_pct,
 
         -- Average delay across all orders (negative = typically early)
@@ -156,13 +156,16 @@ state_performance AS (
         -- Total orders shipped to this state
         COUNT(*) AS total_orders,
 
+        -- Number of on-time orders to this state
+        SUM(CASE WHEN delivery_status = 'On Time' THEN 1 ELSE 0 END) AS on_time_orders,
+
         -- Number of late orders to this state
         SUM(CASE WHEN delivery_status = 'Late' THEN 1 ELSE 0 END) AS late_orders,
 
         -- Late rate as a percentage for this state
         ROUND(
             SUM(CASE WHEN delivery_status = 'Late' THEN 1 ELSE 0 END)
-            / COUNT(*) * 100, 2
+            / COUNT(*) * 100.0, 2
         ) AS late_rate_pct,
 
         -- Average delivery delay for this state (negative = typically early)
@@ -213,7 +216,7 @@ UNION ALL
 SELECT
     CONCAT('STATE: ', customer_state)                     AS report_section,
     total_orders,
-    NULL,           -- on_time_orders not applicable at state level
+    on_time_orders,
     late_orders,
     late_rate_pct,
     avg_delay_days,
