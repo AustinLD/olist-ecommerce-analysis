@@ -1,5 +1,8 @@
-# Data files
+# Data files (download from Kaggle, see README)
 data/
+
+# Local archive of raw data
+Archive/
 
 # Python
 __pycache__/
@@ -19,10 +22,6 @@ Thumbs.db
 # VS Code settings
 .vscode/
 
-# Claud Memory
+# Workspace internal files
 MEMORY.md
-
-# Ignore Power BI binary files
-*.pbix
-
-
+CLAUDE.md

@@ -1,0 +1,49 @@
+{
+  "name": "Olist Tiffany Dark",
+  "dataColors": [
+    "#1FD4CE",
+    "#0ABAB5",
+    "#5BE0DA",
+    "#2E8B9E",
+    "#9B8CFF",
+    "#F4B740",
+    "#E0608E",
+    "#3FA7D6"
+  ],
+  "foreground": "#E6E9EE",
+  "foregroundNeutralSecondary": "#A9B2BD",
+  "foregroundNeutralTertiary": "#6B7280",
+  "background": "#161A21",
+  "backgroundLight": "#1E232C",
+  "backgroundNeutral": "#2A2F3A",
+  "tableAccent": "#1FD4CE",
+  "good": "#3DD68C",
+  "neutral": "#F4B740",
+  "bad": "#F2545B",
+  "maximum": "#1FD4CE",
+  "center": "#2E8B9E",
+  "minimum": "#2A2F3A",
+  "null": "#4B5563",
+  "textClasses": {
+    "callout": { "fontFace": "Segoe UI Semibold", "fontSize": 42, "color": "#FFFFFF" },
+    "title": { "fontFace": "Segoe UI Semibold", "fontSize": 13, "color": "#F2F4F7" },
+    "header": { "fontFace": "Segoe UI Semibold", "fontSize": 11, "color": "#E6E9EE" },
+    "label": { "fontFace": "Segoe UI", "fontSize": 10, "color": "#A9B2BD" }
+  },
+  "visualStyles": {
+    "page": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#12151B" } }, "transparency": 0 }],
+        "outspace": [{ "color": { "solid": { "color": "#12151B" } }, "transparency": 0 }]
+      }
+    },
+    "*": {
+      "*": {
+        "background": [{ "show": true, "color": { "solid": { "color": "#1E232C" } }, "transparency": 0 }],
+        "border": [{ "show": true, "color": { "solid": { "color": "#2C3340" } }, "radius": 12 }],
+        "dropShadow": [{ "show": true, "preset": "BottomRight" }],
+        "title": [{ "show": true, "fontColor": { "solid": { "color": "#F2F4F7" } }, "fontSize": 13, "fontFamily": "Segoe UI Semibold", "alignment": "left" }]
+      }
+    }
+  }
+}

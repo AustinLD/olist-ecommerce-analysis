@@ -131,13 +131,17 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
 (customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state);
 
-LOAD DATA LOCAL INFILE 'C:/Users/austi/OneDrive/Documents/Cowork OS/Portfolio Projects/Project 1 - E-Commerce Analysis/data//olist_geolocation_dataset.csv'
-INTO TABLE geolocation
-FIELDS TERMINATED BY ','
-OPTIONALLY ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 ROWS
-(geolocation_zip_code_prefix, geolocation_lat, geolocation_lng, geolocation_city, geolocation_state);
+-- Geolocation load disabled 2026-06-16. The olist_geolocation_dataset.csv (59MB) was
+-- removed because it is not used by the analysis or the Power BI dashboard (the map uses a
+-- Brazil_States state-level lookup). The geolocation table is left created but empty. To
+-- restore: re-download the CSV from Kaggle into data/ and uncomment the block below.
+-- LOAD DATA LOCAL INFILE 'C:/Users/austi/OneDrive/Documents/Cowork OS/Portfolio Projects/Project 1 - E-Commerce Analysis/data//olist_geolocation_dataset.csv'
+-- INTO TABLE geolocation
+-- FIELDS TERMINATED BY ','
+-- OPTIONALLY ENCLOSED BY '"'
+-- LINES TERMINATED BY '\n'
+-- IGNORE 1 ROWS
+-- (geolocation_zip_code_prefix, geolocation_lat, geolocation_lng, geolocation_city, geolocation_state);
 
 LOAD DATA LOCAL INFILE 'C:/Users/austi/OneDrive/Documents/Cowork OS/Portfolio Projects/Project 1 - E-Commerce Analysis/data//olist_sellers_dataset.csv'
 INTO TABLE sellers

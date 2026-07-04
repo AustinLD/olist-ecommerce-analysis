@@ -32,7 +32,6 @@ Note in all write-ups: this is a real but anonymized public dataset. Findings ar
 | SQL analysis | SQL (CTEs, window functions) | Revenue trends, RFM segmentation, delivery analysis |
 | Python | Pandas, Matplotlib, Seaborn | Data cleaning, EDA, delivery/review correlation |
 | Visualization | Power BI | Interactive dashboard for business stakeholders |
-| AI component | OpenAI or Anthropic API | Auto-generated monthly narrative summary |
 | Version control | GitHub | Code, SQL scripts, README, case study |
 
 ---
@@ -64,10 +63,7 @@ A Jupyter notebook covering:
 - **Product Categories:** Revenue and return rate by category with drill-through
 - **Customer Segments:** RFM tier breakdown, high-value customer count, average spend per segment
 
-### 4. AI Narrative Component
-A Python script that calls an LLM API (OpenAI or Anthropic) to generate a short monthly business summary from the latest data, for example: "Revenue grew 12% MoM, led by Health & Beauty. Delivery delays are concentrated in the North region and correlate with a 0.4-point drop in average review score." Includes a human-review checkpoint note in the output.
-
-### 5. Case Study Write-Up
+### 4. Case Study Write-Up
 A short document (500-800 words) structured as: Problem, Approach, Insights, Business Impact. Hosted on GitHub as the project README. Written for a hiring manager who has 90 seconds.
 
 ---
@@ -78,7 +74,6 @@ A short document (500-800 words) structured as: Problem, Approach, Insights, Bus
 - Data modeling: star schema in Power BI with 9 source tables
 - DAX: time intelligence measures (MoM, running total), KPI cards
 - Python: data cleaning, EDA, correlation analysis
-- Agentic AI: LLM API integration with a practical business use case
 - Storytelling: business-framed write-up, not a methods report
 
 ---
@@ -90,7 +85,7 @@ A short document (500-800 words) structured as: Problem, Approach, Insights, Bus
 | Week 1 | Download dataset, load into SQLite, explore schema, write initial SQL queries |
 | Week 2 | Complete SQL analysis scripts, Python cleaning and EDA notebook |
 | Week 3 | Build Power BI data model and first two dashboard pages |
-| Week 4 | Finish dashboard, build AI narrative script, write case study |
+| Week 4 | Finish dashboard, write case study |
 
 ---
 
@@ -102,7 +97,6 @@ olist-ecommerce-analysis/
 ├── sql/                # All SQL scripts, named by analysis
 ├── notebooks/          # Jupyter notebooks for EDA and Python analysis
 ├── powerbi/            # .pbix file
-├── ai_narrative/       # LLM narrative script
 └── README.md           # Case study write-up
 ```
 
